@@ -1,1 +1,23 @@
+<div class="pageContainer">
+  <div class="message-container">
+    <div *ngFor="let message of messageArray" class="message-item">
+      {{ message }}
+    </div>
+  </div>
+
+  <div class="input-container">
+    <input
+      type="text"
+      (keyup.enter)="saveMessage(messageInput.value)"
+      name="message"
+      id="message"
+      placeholder="Type a message"
+      #messageInput
+    />
+    <button class="btn btn-primary" (click)="saveMessage(messageInput.value)">
+      Send
+    </button>
+  </div>
+</div>
+
 <router-outlet></router-outlet>

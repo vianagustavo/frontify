@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontify';
+
+  messageArray: string[] = [];
+
+  saveMessage(messageValue: string) {
+    this.messageArray.push(messageValue);
+    console.log(this.messageArray);
+  }
 }
